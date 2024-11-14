@@ -17,8 +17,8 @@ export const GET = async (req: Request) => {
         const search = searchParams.get("search");
         const startDate = searchParams.get("startDate");
         const endDate = searchParams.get("endDate");
-        const page = searchParams.get("page" || "1");
-        const limit = searchParams.get("limit" || "10");
+        const page = searchParams.get("page") || "1";
+        const limit = searchParams.get("limit") || "10";
 
 
         if (!userId || !Types.ObjectId.isValid(userId)) {
